@@ -1,6 +1,6 @@
-# Image & Video Upscaler CLI
+# Image & Video Upscaler
 
-A small, privacy-friendly command-line tool for enlarging images and videos by 2x, 4x, or any custom scale factor, or upscaling video to exact 4K/8K resolutions. All processing happens locally with Pillow's high-quality Lanczos resampling and FFmpeg—no uploads, API keys, or external services required.
+A small, privacy-friendly tool for enlarging images and videos by 2x, 4x, or any custom scale factor, or upscaling video to exact 4K/8K resolutions. All processing happens locally with Pillow's high-quality Lanczos resampling and FFmpeg—no uploads, API keys, or external services required. Use the CLI, or drop files (or whole batches) into the bundled local web UI.
 
 > [!NOTE]
 > This is a traditional resizer, not an AI super-resolution model. It produces smooth, high-quality enlargements but does not reconstruct new details.
@@ -17,6 +17,7 @@ A small, privacy-friendly command-line tool for enlarging images and videos by 2
 - Apply optional sharpening after resizing
 - Protect input files and existing outputs by default
 - Process media locally and offline
+- Run a local browser UI alongside the CLI: drag and drop single files or whole batches (up to 50), preview results inline, and download them individually or as one ZIP
 
 ## Requirements
 
