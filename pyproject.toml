@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "local-image-upscaler"
 version = "0.1.0"
-description = "Local image upscaling CLI with custom Lanczos scaling"
+description = "Local image and video upscaling CLI and web UI with Lanczos scaling and FFmpeg"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
-dependencies = ["Pillow>=12.3.0,<13"]
-keywords = ["image", "upscale", "resize", "lanczos", "cli"]
+dependencies = ["Pillow>=12.3.0,<13", "Flask>=3.0,<4"]
+keywords = ["image", "video", "upscale", "resize", "lanczos", "ffmpeg", "cli"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
@@ -18,6 +18,8 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Video :: Conversion",
 ]
 
 [project.urls]
@@ -27,6 +29,7 @@ Issues = "https://github.com/mhazrla/image-upscaler/issues"
 
 [project.scripts]
 image-upscaler = "upscale:main"
+image-upscaler-web = "web:main"
 
 [tool.setuptools]
-py-modules = ["upscale"]
+py-modules = ["upscale", "web"]

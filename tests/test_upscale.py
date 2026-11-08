@@ -90,6 +90,15 @@ class UpscaleTests(unittest.TestCase):
             self.assertEqual(result.size, (24, 16))
             self.assertIn("A", result.getbands())
 
+    def test_target_resolution_is_exact_with_padding(self):
+        output = self.root / "target.png"
+        self.assertEqual(self.run_cli(self.source, "--target", "hd", "-o", output), 0)
+        with Image.open(output) as result:
+            self.assertEqual(result.size, (1920, 1080))
+            self.assertEqual(result.mode, "RGBA")
+            self.assertEqual(result.getpixel((0, 0))[3], 0)
+            self.assertEqual(result.getpixel((960, 540))[3], 100)
+
 
 if __name__ == "__main__":
     unittest.main()

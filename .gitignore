@@ -5,6 +5,8 @@ build/
 dist/
 input/
 output/
+jobs/
+.taste-skill/
 .idea/
 .vscode/
 .DS_Store
