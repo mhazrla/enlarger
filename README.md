@@ -31,8 +31,8 @@ A small, privacy-friendly tool for enlarging images and videos by 2x, 4x, or any
 Clone the repository and create a virtual environment:
 
 ```bash
-git clone https://github.com/mhazrla/image-upscaler.git
-cd image-upscaler
+git clone https://github.com/mhazrla/enlarger.git
+cd enlarger
 python -m venv .venv
 ```
 
